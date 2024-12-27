@@ -15,9 +15,9 @@
 #include "LEDController.h"
 
 #define LED 2
-#define REDPIN 12
-#define GREENPIN 14
-#define BLUEPIN 5
+#define REDPIN 5
+#define GREENPIN 6
+#define BLUEPIN 4
 
 // TODO:
 //  Broadcast Name and status "UP", nothing else
