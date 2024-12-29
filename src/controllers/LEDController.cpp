@@ -14,6 +14,8 @@ LEDController::LEDController(int redPin, int greenPin, int bluePin)
     pinMode(m_redPin, OUTPUT);
     pinMode(m_greenPin, OUTPUT);
     pinMode(m_bluePin, OUTPUT);
+    analogWriteResolution( 8);
+    analogWriteFrequency(5000 );
     updateOuptutValues();
 }
 

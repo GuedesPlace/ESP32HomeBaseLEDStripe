@@ -15,7 +15,7 @@
 #include "LEDController.h"
 
 #define LED 2
-#define REDPIN 5
+#define REDPIN 7
 #define GREENPIN 6
 #define BLUEPIN 4
 
@@ -147,7 +147,7 @@ void setup()
 
 void loop()
 {
-  delay(2000);
+  delay(5000);
   wifiWrapper.checkStatus();
   if (wifiWrapper.isConnected())
   {
@@ -167,6 +167,7 @@ void broadcastStatus()
   JsonDocument doc;
   doc["status"] = "up";
   doc["publicName"] = publicBroadcastName;
+  doc["mac"] = wifiWrapper.getMacAddress();
   String message;
   serializeJson(doc, message);
   char messageChar[message.length() + 1];
